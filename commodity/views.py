@@ -3,7 +3,7 @@ from .models import Bag
 from .forms import SearchForm
 from .serializers import BagSerializers
 from rest_framework.decorators import api_view, permission_classes
-# Create your views here.
+
 
 @api_view(['GET'])
 def BagView(request):
