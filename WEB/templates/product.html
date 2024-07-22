@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<h1>  this page discount...</h1>
+<div class="container">
+  <form method="post" action="{% url 'product'%}" name="getdata">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit"class="btn btn-outline-dark" >Search</button>
+  </form>
+</div>
+
+<div class="container">
+  {% if list_data %}
+  <p>
+   {{list_data}}
+  </p>
+ {%for item in list_data%}
+      <li>{{item}}</li>
+  {% endfor %}
+      {% else %}
+      
+      <h1>جنسی وجود ندارد </h1>
+      {%endif%}
+     {% endblock content %}
+</div>
