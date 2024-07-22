@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search Results for Bags</h1>
+
+<h2>Results</h2>
+<ul>
+{% for item in results %}
+  <li>{{ item.bag_name }}</li>
+{% empty %}
+  <li>No results found</li>
+{% endfor %}
+</ul>
+{% endblock %}

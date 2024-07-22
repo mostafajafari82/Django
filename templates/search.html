@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+  <h1>search for Bags ... </h1>
+  
+  <form method="get" action="{% url 'search' %}">
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-dark" >Search</button>
+  </form>
+</div>
+
+<div class="container">
+<h2>Results</h2>
+<ul>
+{% for item in results %}
+  <li>{{ item }}</li> 
+{% empty %}
+  <li>هیچ دیتایی نیس </li>
+{% endfor %}
+</ul>
+{% endblock content %}
+
+</div>
