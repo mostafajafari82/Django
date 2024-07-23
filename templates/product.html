@@ -13,9 +13,15 @@
   <p>
    {{list_data}}
   </p>
- {%for item in list_data%}
+  <hr><hr><br>
+  {%for item in list_data%}
       <li>{{item}}</li>
   {% endfor %}
+    <hr><hr><br>
+ 
+    <p>
+      {{bag_Serializers}}
+    </p>
       {% else %}
       
       <h1>جنسی وجود ندارد </h1>

@@ -23,4 +23,4 @@ class Bag(models.Model):
     Type = models.IntegerField(choices=bag_type, verbose_name="نوع کیف")
 
     def __str__(self) -> str:
-        return f"اسم برند : {self.bag_name}  -  تعداد کیف ها : {self.bag_number}عدد  -  قیمت کیف  : {self.bag_price} - ریال {self.bag_image}"
+        return f"اسم برند : {self.bag_name}  -  تعداد کیف ها : {self.bag_number}عدد  -  قیمت کیف  : {self.bag_price} - ریال"

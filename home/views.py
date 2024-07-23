@@ -4,7 +4,7 @@ from django.contrib import messages
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-from .serializers import StudentSerializers
+from .serializers import StudentSerializers, BagSerializers
 from .models import Student
 from commodity.views import BagView
 from .forms import SearchHomeForm
@@ -48,7 +48,8 @@ def DroductView(request):
             return render(request, "search.html", {"form": form, "results": results})
 
     list_data = Bag.objects.all()
-    return render(request, "product.html", {"form": form, "list_data": list_data})
+    bag_Serializers= BagSerializers(list_data , many=True)
+    return render(request, "product.html", {"form": form, "list_data": list_data, 'bag_Serializers' :bag_Serializers })
 
 
 def AboutView(request):

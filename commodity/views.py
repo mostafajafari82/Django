@@ -3,14 +3,16 @@ from .models import Bag
 from .forms import SearchForm
 from .serializers import BagSerializers
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
 
 
 @api_view(['GET'])
 def BagView(request):
     list_bag = Bag.objects.all()
     bag_serializer = BagSerializers(list_bag , many=True)
-    context = {"list_data": bag_serializer}
-    return render(request, "./product.html", context)
+    return Response(bag_serializer.data)
+    # context = {"list_data": bag_serializer}
+    # return render(request, "./product.html", context)
 
 
 def SearchView(request):
