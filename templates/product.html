@@ -1,30 +1,27 @@
 {% extends "base.html" %} {% block content %}
-<h1>  this page discount...</h1>
-<div class="container">
+<h2 id="titel_discount">this page discount...</h2>
+<hr><br>
+<div class="search_list">
   <form method="post" action="{% url 'product'%}" name="getdata">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <button type="submit"class="btn btn-outline-dark" >Search</button>
+    {{ form.as_p }} {% csrf_token %}
+    <button type="submit" class="btn btn-outline-dark">Search</button>
   </form>
 </div>
 
 <div class="container">
-  {% if list_data %}
-  <p>
-   {{list_data}}
-  </p>
-  <hr><hr><br>
-  {%for item in list_data%}
+  {% if list_data %} {%for item in list_data%}
+  <ul>
+    <div class="container" id="list_data">
       <li>{{item}}</li>
+    </div>
+  </ul>
   {% endfor %}
-    <hr><hr><br>
- 
-    <p>
-      {{bag_Serializers}}
-    </p>
-      {% else %}
-      
-      <h1>جنسی وجود ندارد </h1>
-      {%endif%}
-     {% endblock content %}
+  <hr />
+  <hr />
+  <br />
+
+  {% else %}
+
+  <h1>جنسی وجود ندارد</h1>
+  {%endif%} {% endblock content %}
 </div>

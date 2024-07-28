@@ -1,19 +1,54 @@
 {% extends "./base.html" %}
 
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-</head>
+  {% block content %}
+  <body class="home_body">
+    <div class="container_1">
+      <p id="p1">
+        سلام . به وب سایت ما خیلی خوش اومدید ... ما در این جا به شما بهترین کالا
+        ها رو نشان خواهیم داد ... تمام تلاش ما راضایت داشتن شما از وب سایت ما
+        هست ممنون میشویم مارو دنبال کنید .
+      </p>
+    </div>
+    <div class="container_1">
+        <a href="{% url 'product' %}">
+            <img id="images" src='/static/images/image_happy.png' alt="A image shope" width="70%">
+        </a>
+    </div>
 
-{% block content %}
-<body class="home_body">
-    <h1>home page</h1>
-    <h1>mostafa</h1>
 
+    <div class="container_2">
+      <p id="p2">
+        سلام . به وب سایت ما خیلی خوش اومدید ... ما در این جا به شما بهترین کالا
+        ها رو نشان خواهیم داد ... تمام تلاش ما راضایت داشتن شما از وب سایت ما
+        هست ممنون میشویم مارو دنبال کنید .
+      </p>
+    </div>
+    <div class="container_2">
+        <a href="{% url 'product' %}">
+            <img id="images" src='/static/images/image_happy.png' alt="A image shope" width="70%">
+        </a>
+    </div>
+
+    <div class="container_1">
+      <p id="p1">
+        سلام . به وب سایت ما خیلی خوش اومدید ... ما در این جا به شما بهترین کالا
+        ها رو نشان خواهیم داد ... تمام تلاش ما راضایت داشتن شما از وب سایت ما
+        هست ممنون میشویم مارو دنبال کنید .
+      </p>
+    </div>
+    <div class="container_1">
+        <a href="{% url 'product' %}">
+            <img id="images" src='/static/images/image_happy.png' alt="A image shope" width="70%">
+        </a>
+    </div>
 </body>
-{% endblock content %}
+  {% endblock content %}
 </html>
-

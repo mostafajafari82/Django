@@ -4,10 +4,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.rtl.css'%}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat"/>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.rtl.css'%}"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
     <titel> {% block title %} {% endblock title %} </titel>
   </head>
   <body>
@@ -15,22 +28,20 @@
       <nav>
         <ul class="Top_bar">
           {% if user.is_authenticated %}
-          
-          <p style="color: aliceblue;">
-          
-          
+          <p style="color: aliceblue">
             {{ user.username }}!
             <a href="{% url 'logout' %}">خروج</a>
           </p>
-          
           {% else %}
-          <p style="color: aliceblue;"> <a href="{% url 'singup' %}">ثبت نام</a></p>
-          <p style="color: aliceblue;"> <a href="{% url 'login' %}">ورود</a></p>
+          <p style="color: aliceblue">
+            <a href="{% url 'singup' %}">ثبت نام</a>
+          </p>
+          <p style="color: aliceblue"><a href="{% url 'login' %}">ورود</a></p>
           {% endif %}
-          <a href="{% url 'about' %}"><li>درباره ی ما </li></a>
+          <a href="{% url 'about' %}"><li>درباره ی ما</li></a>
           <a href="{% url 'discount' %}"><li>تخفیفات</li></a>
           <a href="{% url 'product' %}"><li>محصولات</li></a>
-          <a href="{% url 'home' %}"><li>خانه </li></a>
+          <a href="{% url 'home' %}"><li>خانه</li></a>
         </ul>
       </nav>
     </div>
@@ -44,6 +55,5 @@
     {% block content %} {% endblock content %}
     <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
     <script src="{% static 'js/index.js'%}"></script>
-
   </body>
 </html>
