@@ -12,7 +12,7 @@ urlpatterns = [
 
 
     # path("search", SearchView, name='search'),
-    # path("student_list", Student_List),
+    path("comment_list", Commetn_List),
     # path("student_details/<pk>", Student_Details),
     # path("student_save", Student_save),
     # path("student_update/<pk>", Student_update),
